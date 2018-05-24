@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  //selector: '[app-servers]', //selection by attribute
+  // selector:'.app-servers', //selection by class. id will not work
   selector: 'app-servers',
   //templateUrl: './servers.component.html',
   // inline template
