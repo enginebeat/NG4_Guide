@@ -15,4 +15,5 @@
 <br>
 <button 
   class= "clearbtn"
-  [disabled]=inputEmpty()>Clear User</button>
+  [disabled]="!username"
+  (click)="input_username.text=null">Clear User</button>
