@@ -1,0 +1,26 @@
+<hr>
+<h1>This is the servers component</h1>
+<app-success></app-success>
+<app-warning></app-warning>
+<hr>
+<!--<input 
+    type="text" 
+    class="formControl"
+    (input)="onUpdateServerName($event)">-->
+
+<input 
+    type="text" 
+    class="formControl"
+    [(ngModel)]="serverName">
+<!--<p>{{serverName}}</p>-->
+<hr>
+<hr>
+<p [innerText]="allowNewServer"></p>
+<button
+  class=" btn btn-primary"
+  [disabled]="!allowNewServer"
+  (click)="onCreateServer()"
+  (mouseover) ="onHoverButton()">Add Server</button>
+  <p>{{serverCreationStatus}}</p>
+  <p>{{hoveringButton}}</p>
+<app-server></app-server>
