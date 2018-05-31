@@ -9,6 +9,7 @@ import { Component, OnInit } from "@angular/core";
 export class ServersComponent implements OnInit { 
     allowNewServer = false;
     serverCreationStatus="No server was created!";
+    serverCreated = false;
     hoveringButton = 'You are not on top of the button';
     serverName = 'TestServer';
 
@@ -24,6 +25,7 @@ export class ServersComponent implements OnInit {
     
     onCreateServer(){
         this.serverCreationStatus = `${this.serverName} Server was created!`;
+        this.serverCreated = true;
     }
 
     onHoverButton(){
