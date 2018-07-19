@@ -9,6 +9,7 @@ export class ServerComponent implements OnInit {
   serverID = 10;
   serverStatus = 'Offline';
   constructor() { 
+    this.serverStatus = Math.random() > 0.5 ? 'online' : 'offline';
   
    }
 
@@ -16,6 +17,10 @@ export class ServerComponent implements OnInit {
   }
   getServerStatus(){
     return this.serverStatus;
+  }
+
+  getColourStatus(){
+    return this.getServerStatus() === 'online' ? 'green' : 'red';
   }
 
 }

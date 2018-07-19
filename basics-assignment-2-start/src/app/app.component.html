@@ -9,11 +9,17 @@
   <input 
     type="text" 
     class= "input_username"
-    [(ngModel)]="username"> 
+    [(ngModel)]="username"> <!--Two-Way-Binding -->
  </div>
-<p>{{username}}</p>
+<p>{{username}}</p> <!-- string Interpolation -->
 <br>
-<button 
+<!-- this is a better solution than bellow in this instance -->
+<!-- <button 
   class= "clearbtn"
   [disabled]="!username"
-  (click)="input_username.text=null">Clear User</button>
+  (click)="username=''">Clear User</button> -->
+  
+  <button 
+  class= "clearbtn"
+  [disabled]="!username"
+  (click)="resetUser()">Clear User</button>
